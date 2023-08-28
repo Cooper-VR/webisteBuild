@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+    <meta name="description" content="Cooper's personal website">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio">
+    <meta name="author" content="Cooper Bower">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-61e3227f.png">
+
+  <script type="module" crossorigin src="/assets/index-24176925.js"></script>
+  <link rel="stylesheet" href="/assets/index-aba85753.css">
+</head>
+
+<body>
+    <nav id="topNav">
+        <a href="#About">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#Contacts">Contacts</a>
+    </nav>
+
+    <div id="pfpContainer">
+        <img alt="Logo" src="/assets/myPFP2-66976bb7.png">
+    </div>
+
+    <div class="sticky">Cooper Bower</div>
+
+    <div id="About" class="linkLocation"></div>
+    <div id="AboutMain">
+        <div id="bigAbout">
+            <p>A</p>
+            <p>B</p>
+            <p>O</p>
+            <p>U</p>
+            <p>T</p>
+            <p style="color: rgba(0, 0, 0, 0);text-shadow: 0px 0px 0px #00000000;"> | </p>
+            <p>M</p>
+            <p>E</p>
+        </div>
+        <div id="aboutContent">
+            <p class="aboutMeText">About me</p>
+            <p class="aboutMeText">I have four certifications:</p>
+            <ul style="margin: 0;">
+                <li class="aboutMeText">Python</li>
+                <li class="aboutMeText">HTML/CSS</li>
+                <li class="aboutMeText">Javascript</li>
+                <li class="aboutMeText">Software development (C#)</li>
+            </ul>
+            <p class="aboutMeText">I am experenced in the Unity game engine and can also 3D model in blender</p>
+            <p class="aboutMeText">My goal is the go into VR development as a profession</p>
+            <p class="aboutMeText">education</p>
+            <ol>
+                <li class="aboutMeText">Highschool</li>
+                <li class="aboutMeText">taking dual enrollment classes and AP classes</li>
+                <li class="aboutMeText">EVIT for software deveopment and app design</li>
+            </ol>
+        </div>
+    </div>
+
+    <div id="projectMain">
+        <div id="projects">
+            <button class="projectCol" onclick="tabChange(this, 'blender')">
+                <p>Blender</p>
+                <div id="blenderLogo"></div>
+            </button>
+            <button class="projectCol" onclick="tabChange(this, 'unity')">
+                <p>Unity</p>
+                <div id="unityLogo"></div>
+            </button>
+            <button class="projectCol" onclick="tabChange(this, 'third')">
+                <p>Blender</p>
+                <div></div>
+            </button>
+            <button class="projectCol" onclick="tabChange(this, 'fourth')">
+                <p>Blender</p>
+                <div></div>
+            </button>
+        </div>
+        <div id="projectsShow">
+            <div class="projectView" id="Tab0">
+                <div class="viewButtons">
+                    <button onclick="blenderSwitch('back')">previous</button>
+                    <button onclick="blenderSwitch('next')">next</button>
+                </div>
+                <div class="blenderProjects" id="blenderProject0">
+                    <label for="slider1">Height Slider</label>
+                    <input  style="width: 100%;" type="range" id="slider1" min="0" max="300" value="50" class="slider">
+                    <canvas style="width:100%; height: 100%;" id="bg"></canvas>
+                </div>
+                <div style="display: none;" class="blenderProjects" id="blenderProject1">
+                    <label for="slider2">Height Slider</label>
+                    <input style="width: 100%;" type="range" id="slider2" min="0" max="300" value="50" class="slider">
+                    <canvas id="bh" style="width:100%; height: 100%;" id="bg"></canvas>
+                </div>
+                <div style="display: none;" class="blenderProjects" id="blenderProject2">
+                    <label for="slider3">Height Slider</label>
+                    <input style="width: 100%;" type="range" id="slider3" min="0" max="300" value="50" class="slider">
+                    <canvas id="bg2" style="width:100%; height: 100%;" id="bg"></canvas>
+                </div>
+                <div style="display: none;" class="blenderProjects" id="blenderProject3">
+                    <label for="slider4">Height Slider</label>
+                    <input style="width: 100%;" type="range" id="slider4" min="0" max="300" value="50" class="slider">
+                    <canvas id="bh2" style="width:100%; height: 100%;" id="bg"></canvas>
+                </div>
+            </div>
+            <div id="Tab1" class="projectView">
+                <div class="viewButtons">
+                    <button onclick="unitySwitch('back')">previous</button>
+                    <button onclick="unitySwitch('next')">next</button>
+                </div>
+                <div class="blenderProjects" id="unity0">
+                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                </div>
+                <div style="display: none;" class="blenderProjects" id="unity1">
+                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                </div>
+                <div style="display: none;" class="blenderProjects" id="unity2">
+                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                </div>
+                <div style="display: none;" class="blenderProjects" id="unity3">
+                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                </div>
+            </div>
+            <div id="Tab2" class="projectView">
+                <div class="viewButtons">
+                    <button onclick="thirdSwitch('back')">previous</button>
+                    <button onclick="thirdSwitch('next')">next</button>
+                </div>
+                <div class="blenderProjects" id="third0">
+                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                </div>
+                <div style="display: none;" class="blenderProjects" id="third1">
+                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                </div>
+                <div style="display: none;" class="blenderProjects" id="third2">
+                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                </div>
+                <div style="display: none;" class="blenderProjects" id="third3">
+                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                </div>
+
+            </div>
+            <div id="Tab3" class="projectView">
+                <div class="viewButtons">
+                    <button onclick="fourthSwitch('back')">previous</button>
+                    <button onclick="fourthSwitch('next')">next</button>
+                </div>
+                <div class="blenderProjects" id="fourth0">
+                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                </div>
+                <div style="display: none;" class="blenderProjects" id="fourth1">
+                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                </div>
+                <div style="display: none;" class="blenderProjects" id="fourth2">
+                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                </div>
+                <div style="display: none;" class="blenderProjects" id="fourth3">
+                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="animatedContainer" id="LinksContainer">
+        <a target=”_blank” alt="gitHub" href="https://github.com/Cooper-VR"><img alt="github Logo" src="/assets/gitLogo-8f5224d1.png"></a>
+        <a target=”_blank” alt="linkenIn" href="https://www.linkedin.com/in/cooper-bower-b58b10273/"><img alt="linkenIn logo"
+                src="/assets/linkedinLogo-9c94a5a3.png"></a>
+    </div>
+    <footer id="Contacts" class="linkLocation">
+        <nav id="bottomNav">
+            <a href="#topNav">Home</a>
+            <a href="#About">About Me</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Contacts"><button onclick="showContacts();">Contacts</button></a>
+        </nav>
+    </footer>
+    <script src="newScripts.js"></script>
+</body>
+
+</html>
