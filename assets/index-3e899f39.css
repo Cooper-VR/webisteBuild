@@ -33,11 +33,11 @@ label {
 }
 
 #blenderLogo {
-    background-image: url(webisteBuild/assets/blenderLogo.png)
+    background-image: url(blenderLogo.png)
 }
 
 #unityLogo {
-    background-image: url(webisteBuild/assets/unityLogo.png)
+    background-image: url(unityLogo.png)
 }
 
 .sticky {
