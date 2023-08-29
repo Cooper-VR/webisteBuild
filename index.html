@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cooper's Website</title>
     
     
     <meta name="description" content="Cooper's personal website">
     <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio">
     <meta name="author" content="Cooper Bower">
     <link rel="icon" type="image/x-icon" href="assets/favicon-61e3227f.png">
-    <link rel="stylesheet" href="assets/index-3e899f39.css">
+  
+  <link rel="stylesheet" href="assets/index-8dbebe8d.css">
 </head>
 
 <body>
@@ -21,22 +22,20 @@
         <a href="#Contacts">Contacts</a>
     </nav>
 
-    <div class="sticky">Cooper Bower</div>
+    <div id="nameContainer">
+        <div class="sticky">Cooper Bower</div>
+
+        <!--could do matrix effect on this somethow-->
+        <div>Programmer and 3D Modeler</div>
+    </div>
+
 
     <div id="About" class="linkLocation"></div>
     <div id="AboutMain">
         <div id="bigAbout">
-            <p>A</p>
-            <p>B</p>
-            <p>O</p>
-            <p>U</p>
-            <p>T</p>
-            <p style="color: rgba(0, 0, 0, 0);text-shadow: 0px 0px 0px #00000000;"> | </p>
-            <p>M</p>
-            <p>E</p>
+            <p>ABOUT ME</p>
         </div>
         <div id="aboutContent">
-            <p class="aboutMeText">About me</p>
             <p class="aboutMeText">I have four certifications:</p>
             <ul style="margin: 0;">
                 <li class="aboutMeText">Python</li>
@@ -55,6 +54,9 @@
         </div>
     </div>
 
+    <div style="height: 30vh;"></div>
+
+    <p style="text-align: center; font-size:min(4vh,4vw)">Projects</p>
     <div id="projectMain">
         <div id="projects">
             <button class="projectCol" onclick="tabChange(this, 'blender')">
@@ -173,7 +175,7 @@
         </nav>
     </footer>
     <script src="assets/Scripts.js"></script>
-    <script type="module" src="assets/index-40b412ed.js"></script>
+    <script type="module" crossorigin src="assets/index-ac91426b.js"></script>
 </body>
 
 </html>
