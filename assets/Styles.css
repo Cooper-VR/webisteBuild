@@ -1,36 +1,43 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to bottom right, rgb(58, 58, 58), rgb(3, 3, 3));
     overflow-x: hidden;
 }
-*{
-    color:white;
+
+* {
+    color: white;
     scroll-behavior: smooth;
     text-decoration: none;
 }
-svg{
-    position:fixed;
+
+svg {
+    position: fixed;
     width: 8vw;
     height: 8vw;
 }
-label{
+
+label {
     color: black;
     text-align: center;
     background-color: rgb(175, 175, 175);
     padding-top: 1%;
     padding-bottom: 1%;
 }
-.linkLocation{
+
+.linkLocation {
     width: 100vw;
-    display:flex;
+    display: flex;
 }
-#blenderLogo{
-    background-image: url(pictures/blenderLogo.png);
+
+#blenderLogo {
+    background-image: url(blenderLogo.png);
 }
-#unityLogo{
-    background-image: url(pictures/unityLogo.png);
+
+#unityLogo {
+    background-image: url(unityLogo.png);
 }
+
 .sticky {
     position: sticky;
     top: 0;
@@ -40,8 +47,9 @@ label{
     padding: 5px;
     background-color: rgb(117, 117, 117);
     box-shadow: 0px 00vh 1vh rgb(117, 117, 117);
-  }
-.blenderProjects{
+}
+
+.blenderProjects {
     height: 100%;
     width: 100%;
     display: flex;
@@ -49,7 +57,7 @@ label{
     flex-direction: column;
 }
 
-#pfpContainer{
+#pfpContainer {
     position: absolute;
     top: 5vh;
     display: flex;
@@ -58,30 +66,33 @@ label{
     left: 5vw;
     overflow-y: hidden;
 }
-#pfpContainer img{
+
+#pfpContainer img {
     height: 10vh;
     overflow-x: hidden;
 }
 
-.viewButtons{
+.viewButtons {
     display: flex;
     background-color: rgba(0, 0, 0, 0);
     flex-direction: row;
     justify-content: space-between;
 }
-.viewButtons button{
+
+.viewButtons button {
     width: 20vw;
     height: 5vh;
-    color:white;
+    color: white;
     background-color: rgb(24, 24, 24);
-    border:  solid rgb(51, 51, 51) min(0.3vh, 0.3vw);
+    border: solid rgb(51, 51, 51) min(0.3vh, 0.3vw);
 
 }
-.viewButtons button:hover{
+
+.viewButtons button:hover {
     cursor: pointer;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -89,40 +100,48 @@ nav{
     padding: 2vh;
     padding-bottom: 2vh;
 }
-#bottomNav{
+
+#bottomNav {
     float: right;
     width: 80vw;
     margin: 0;
-    justify-content:end; 
+    justify-content: end;
     margin-top: 5vw;
 }
-#bottomNav a, #bottomNav a button{
+
+#bottomNav a,
+#bottomNav a button {
     font-size: min(4vh, 4vw);
     margin-right: 5vw;
     background-color: transparent;
     border: none;
     margin: 0;
     margin-right: 2vw;
-   
+
 }
-#AboutMain{
+
+#AboutMain {
     display: flex;
 }
-#projects{
+
+#projects {
     width: 35vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
 }
-#aboutContent{
+
+#aboutContent {
     width: 65vw;
 }
-#aboutContent *{
+
+#aboutContent * {
     font-size: min(3vh, 3vw);
 }
-.projectCol{
+
+.projectCol {
     background-color: rgb(31, 31, 31);
     width: 70%;
     cursor: pointer;
@@ -132,21 +151,24 @@ nav{
     border: solid rgb(66, 66, 66) min(0.3vh, 0.3vw);
     border-radius: min(1.3vw, 1.3vw);
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 }
-.projectCol *{
+
+.projectCol * {
     color: white;
 
 }
-.projectCol p{
+
+.projectCol p {
     background-color: transparent;
     border: none;
     text-align: center;
     font-size: min(2vh, 2vw);
     margin: 0;
 }
-.projectCol div{
+
+.projectCol div {
     background-repeat: no-repeat;
     background-size: 70%;
     background-position: center;
@@ -155,7 +177,8 @@ nav{
     height: 100%;
     width: 20%;
 }
-#bigAbout p{
+
+#bigAbout p {
     text-align: center;
     text-shadow: 0px 0px 10px #c8ff00;
     margin: 0;
@@ -163,77 +186,89 @@ nav{
     margin-left: 10vw;
     margin-right: 10vw;
 }
-#projectMain{
+
+#projectMain {
     display: flex;
     flex-direction: row;
 }
-#projects button{
+
+#projects button {
     height: 5vw;
 }
-#projectsShow{
+
+#projectsShow {
     width: 60vw;
     display: flex;
 }
-.projectView{
+
+.projectView {
     height: 60vh;
     width: 60vw;
     background-color: rgba(255, 255, 255, 0);
     overflow-y: hidden;
 }
-.projectView *{
+
+.projectView * {
     overflow-y: hidden;
 }
 
-#Tab0{
-    transform: 
-    translateX(100vw);
-    opacity: 0;
-    width: 0;
-    transition: 0.7s ease;
-}
-#Tab1{
-    transform: 
-    translateX(100vw);
-    opacity: 0;
-    width: 0;
-    transition: 0.7s ease;
-}
-#Tab2{
-    transform: 
-    translateX(100vw);
-    opacity: 0;
-    width: 0;
-    transition: 0.7s ease;
-}
-#Tab3{
-    transform: 
-    translateX(100vw);
+#Tab0 {
+    transform:
+        translateX(100vw);
     opacity: 0;
     width: 0;
     transition: 0.7s ease;
 }
 
-#Tab0.animateTabs{
+#Tab1 {
+    transform:
+        translateX(100vw);
+    opacity: 0;
+    width: 0;
+    transition: 0.7s ease;
+}
+
+#Tab2 {
+    transform:
+        translateX(100vw);
+    opacity: 0;
+    width: 0;
+    transition: 0.7s ease;
+}
+
+#Tab3 {
+    transform:
+        translateX(100vw);
+    opacity: 0;
+    width: 0;
+    transition: 0.7s ease;
+}
+
+#Tab0.animateTabs {
     transform: translateX(0vw);
     opacity: 1;
     width: 60vw;
 }
-#Tab1.animateTabs{
+
+#Tab1.animateTabs {
     transform: translateX(0vw);
     opacity: 1;
     width: 60vw;
 }
-#Tab2.animateTabs{
+
+#Tab2.animateTabs {
     transform: translateX(0vw);
     opacity: 1;
     width: 60vw;
 }
-#Tab3.animateTabs{
+
+#Tab3.animateTabs {
     transform: translateX(0vw);
     opacity: 1;
     width: 60vw;
 }
-#LinksContainer{
+
+#LinksContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -241,10 +276,11 @@ nav{
     float: right;
 
     transform:
-    translateX(0vw);
+        translateX(0vw);
     transition: 1s;
 }
-#LinksContainer a{
+
+#LinksContainer a {
     height: 8vh;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -253,14 +289,15 @@ nav{
     margin-top: 2vh;
     margin-right: 2vw;
 }
-#LinksContainer a img{
+
+#LinksContainer a img {
     overflow-y: hidden;
     margin: 0;
     height: 100%;
     overflow-x: hidden;
 }
 
-#LinksContainer.animatedContainer{
-    transform: 
-    translateX(110vw);
+#LinksContainer.animatedContainer {
+    transform:
+        translateX(110vw);
 }
