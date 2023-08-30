@@ -130,9 +130,19 @@ nav {
 
 #programmingArea {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly
+    justify-content: space-evenly;
 }
+@media (orientation: portrait) {
+    #programmingArea {
+        flex-direction: column;
+    }
+}
+@media (orientation: landscape) {
+    #programmingArea {
+        flex-direction: row;
+    }
+}
+
 
 .programmingSecion div {
     background-color: #0000;
@@ -329,6 +339,7 @@ nav {
 
 #LinksContainer {
     display: flex;
+    margin-right: 5%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -343,14 +354,14 @@ nav {
     overflow-x: hidden;
     width: 8vw;
     margin: 0;
-    margin-top: 2vh;
+    margin-top: 1vh;
     margin-right: 2vw
 }
 
 #LinksContainer a img {
     overflow-y: hidden;
     margin: 0;
-    height: 100%;
+    height: min(7vh, 7vw);
     overflow-x: hidden
 }
 
