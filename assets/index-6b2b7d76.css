@@ -1,16 +1,20 @@
 @import"https://use.typekit.net/jmk3xov.css";
 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
 body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to bottom right, rgb(58, 58, 58), rgb(3, 3, 3));
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
 * {
     color: #fff;
     scroll-behavior: smooth;
-    text-decoration: none
+    text-decoration: none;
+    
 }
 
 svg {
@@ -35,11 +39,11 @@ label {
 }
 
 #blenderLogo {
-    background-image: url(/blenderLogo-32af973a.png)
+    background-image: url(blenderLogo-32af973a.png)
 }
 
 #unityLogo {
-    background-image: url(/unityLogo-6bba9f0e.png)
+    background-image: url(unityLogo-6bba9f0e.png)
 }
 
 .sticky {
@@ -157,19 +161,19 @@ nav {
 }
 
 #pythonLogo {
-    background-image: url(/pythonLogo-314ea70d.png)
+    background-image: url(pythonLogo-314ea70d.png)
 }
 
 #htmlCSSLogo {
-    background-image: url(/htmlCssLogo-6a04b140.png)
+    background-image: url(htmlCssLogo-6a04b140.png)
 }
 
 #javascriptLogo {
-    background-image: url(/javaScriptLogo-a12b5e19.png)
+    background-image: url(javaScriptLogo-a12b5e19.png)
 }
 
 #cLogo {
-    background-image: url(/cLogo-dfbd55b2.png)
+    background-image: url(cLogo-dfbd55b2.png)
 }
 
 .programmingSecion d {
