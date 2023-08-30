@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooper's Website</title>
-    
-    
+
+
     <meta name="description" content="Cooper's personal website">
     <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio">
     <meta name="author" content="Cooper Bower">
     <link rel="icon" type="image/x-icon" href="assets/favicon-61e3227f.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <script type="module" crossorigin src="assets/index-daf5bf62.js"></script>
-  <link rel="stylesheet" href="assets/index-6b2b7d76.css">
+    <script type="module" crossorigin src="assets/index-daf5bf62.js"></script>
+    <link rel="stylesheet" href="assets/index-6b2b7d76.css">
 </head>
 
 <body>
@@ -98,13 +98,8 @@
                 <div id="unityLogo"></div>
             </button>
             <button class="projectCol" onclick="tabChange(this, 'third')">
-                <p>Blender</p>
-                <div></div>
-            </button>
-            <button class="projectCol" onclick="tabChange(this, 'fourth')">
-                <p>Blender</p>
-                <div></div>
-            </button>
+                <p>c#/python</p>
+                <div id="cPython"></div>
         </div>
         <div id="projectsShow">
             <div class="projectView" id="Tab0">
@@ -138,17 +133,24 @@
                     <button onclick="unitySwitch('back')">previous</button>
                     <button onclick="unitySwitch('next')">next</button>
                 </div>
-                <div class="blenderProjects" id="unity0">
-                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                <div class="blenderProjects2">
+                    <div id="unity0" class="projectPictures">
+                    </div>
                 </div>
-                <div style="display: none;" class="blenderProjects" id="unity1">
-                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                <div class="blenderProjects2">
+                    <div id="unity1" class="projectPictures">
+                        <video controls autoplay src="assets/bokoAI.mov"></video>
+                    </div>
                 </div>
-                <div style="display: none;" class="blenderProjects" id="unity2">
-                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                <div class="blenderProjects2">
+                    <div id="unity2" class="projectPictures">
+                        <video controls autoplay src="assets/terrainShader.mp4"></video>
+                    </div>
                 </div>
-                <div style="display: none;" class="blenderProjects" id="unity3">
-                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                <div class="blenderProjects2">
+                    <div id="unity3" class="projectPictures">
+                        <video controls autoplay src="assets/bokoAI.mov"></video>
+                    </div>
                 </div>
             </div>
             <div id="Tab2" class="projectView">
@@ -157,36 +159,23 @@
                     <button onclick="thirdSwitch('next')">next</button>
                 </div>
                 <div class="blenderProjects" id="third0">
-                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                    <div class="projectPictures" id="thirdImg0">
+                    </div>
                 </div>
                 <div style="display: none;" class="blenderProjects" id="third1">
-                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                    <div class="projectPictures" id="thirdImg1">
+                        <video controls autoplay src="assets/bokoAI.mov"></video>
+                    </div>
                 </div>
                 <div style="display: none;" class="blenderProjects" id="third2">
-                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                    <div class="projectPictures" id="thirdImg2">
+                    </div>
                 </div>
                 <div style="display: none;" class="blenderProjects" id="third3">
-                    <div style="background-color:white; width: 100%; height:100%;"></div>
+                    <div class="projectPictures" id="thirdImg3">
+                    </div>
                 </div>
 
-            </div>
-            <div id="Tab3" class="projectView">
-                <div class="viewButtons">
-                    <button onclick="fourthSwitch('back')">previous</button>
-                    <button onclick="fourthSwitch('next')">next</button>
-                </div>
-                <div class="blenderProjects" id="fourth0">
-                    <div style="background-color:white; width: 100%; height:100%;"></div>
-                </div>
-                <div style="display: none;" class="blenderProjects" id="fourth1">
-                    <div style="background-color:white; width: 100%; height:100%;"></div>
-                </div>
-                <div style="display: none;" class="blenderProjects" id="fourth2">
-                    <div style="background-color:white; width: 100%; height:100%;"></div>
-                </div>
-                <div style="display: none;" class="blenderProjects" id="fourth3">
-                    <div style="background-color:white; width: 100%; height:100%;"></div>
-                </div>
             </div>
         </div>
     </div>

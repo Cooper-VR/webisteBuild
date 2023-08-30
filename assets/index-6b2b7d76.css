@@ -61,11 +61,28 @@ label {
 }
 
 .blenderProjects {
+    width: 100%;
     height: 100%;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0);
+    flex-direction: column
+}
+
+.blenderProjects2 {
     width: 100%;
     display: flex;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0);
     flex-direction: column
+}
+
+.blenderProjects div{
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+
+}
+
+#cPython{
+    background-image: url(cLogo-dfbd55b2.png);
 }
 
 #pfpContainer {
@@ -440,4 +457,56 @@ blockquote p {
 
 .left {
     grid-column: 6 / 12
+}
+
+.projectPictures{
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-size:cover;
+    background-position: center;
+    background-color: transparent;
+    margin-bottom: 5vh;
+}
+
+#thirdImg0{
+    background-image: url(Capture.PNG);
+}
+#thirdImg1{
+    background-image: url();
+}
+#thirdImg2{
+    background-image: url();
+}
+#thirdImg3{
+    background-image: url();
+}
+
+#fourthImg0{
+    background-image: url();
+}
+#fourthImg1{
+    background-image: url();
+}
+#fourthImg2{
+    background-image: url();
+}
+#fourthImg3{
+    background-image: url();
+}
+
+#unity0{
+    background-image: url(korokForest.png);
+}
+#unity1 video{
+    width: 110%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#unity2 video{
+    width: 110%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#unity3{
+    
 }
