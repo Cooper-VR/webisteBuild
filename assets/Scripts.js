@@ -103,26 +103,19 @@ function tabChange(button, type) {
         tab0.classList.add('animateTabs')
         tab1.className = "projectView";
         tab2.className = "projectView";
-        tab3.className = "projectView";
     } else if (type == "unity") {
         tab0.className = "projectView";
         tab1.className = "projectView";
         tab1.classList.add('animateTabs');
         tab2.className = "projectView";
-        tab3.className = "projectView";
+
     } else if (type == "third") {
         tab0.className = "projectView";
         tab1.className = "projectView";
         tab2.className = "projectView";
         tab2.classList.add('animateTabs');
-        tab3.className = "projectView"
-    } else if (type == "fourth") {
-        tab0.className = "projectView";
-        tab1.className = "projectView";
-        tab2.className = "projectView";
-        tab3.className = "projectView";
-        tab3.classList.add('animateTabs');
-    }
+
+    } 
 
 }
 
