@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to bottom right, rgb(58, 58, 58), rgb(3, 3, 3));
+    overflow-x: hidden;
 }
 
 * {
@@ -332,8 +333,8 @@ nav {
     justify-content: center;
     align-items: center;
     float: right;
-    transform: translate(0);
-    transition: 1s
+    opacity: 1;
+    transition: 0.2s;
 }
 
 #LinksContainer a {
@@ -354,7 +355,8 @@ nav {
 }
 
 #LinksContainer.animatedContainer {
-    transform: translate(110vw)
+
+    opacity: 0;
 }
 
 :root {
