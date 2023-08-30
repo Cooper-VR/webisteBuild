@@ -161,15 +161,15 @@ nav {
 }
 
 #pythonLogo {
-    background-image: url(pythonLogo-314ea70d.png)
+    background-image: url(/assets/pythonLogo-314ea70d.png)
 }
 
 #htmlCSSLogo {
-    background-image: url(htmlCssLogo-6a04b140.png)
+    background-image: url(assets/htmlCssLogo-6a04b140.png)
 }
 
 #javascriptLogo {
-    background-image: url(javaScriptLogo-a12b5e19.png)
+    background-image: url(/javaScriptLogo-a12b5e19.png)
 }
 
 #cLogo {
