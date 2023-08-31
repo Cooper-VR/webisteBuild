@@ -144,7 +144,7 @@ function typeLetter() {
     const name = document.querySelector('.sticky');
     const desc = document.querySelector('#desc');
 
-    const descText = "programmer and 3D modeler"
+    const descText = "Programmer and 3D Modeler"
     const nameText = 'Cooper Bower'
 
     let index = 0;
