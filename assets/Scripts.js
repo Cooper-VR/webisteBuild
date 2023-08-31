@@ -1,15 +1,22 @@
+//projcect view change variable
 let blenderCount = 0;
 
+//get project tabs
 const tab0 = document.querySelector("#Tab0");
 const tab1 = document.querySelector("#Tab1");
 const tab2 = document.querySelector("#Tab2");
 const tab3 = document.querySelector("#Tab3");
 
+//function for the blender tab
 function blenderSwitch(type) {
+    //get the canvas
     const canvas = document.querySelector("#blenderProject" + blenderCount);
     let currentID = canvas.id;
+
+    //get the index of the canvas
     currentID = currentID.replace("blenderProject", "");
 
+    //increment according to its value
     if (type == "next") {
         if (blenderCount + 1 > 3) {
             blenderCount = 0;
@@ -24,15 +31,22 @@ function blenderSwitch(type) {
         }
     }
 
+    //set display for new and old canvas
     canvas.style.display = "none";
     document.querySelector("#blenderProject" + blenderCount).style.display = "block";
 }
 
+//function the unity tab switcher
 function unitySwitch(type) {
+
+    //get the current project
     const canvas = document.querySelector("#unity" + blenderCount);
     let currentID = canvas.id;
+
+    //get the current index
     currentID = currentID.replace("unity", "");
 
+    //increment value
     if (type == "next") {
         if (blenderCount + 1 > 3) {
             blenderCount = 0;
@@ -47,15 +61,21 @@ function unitySwitch(type) {
         }
     }
 
+    //set visibility
     canvas.style.display = "none";
     document.querySelector("#unity" + blenderCount).style.display = "block";
 }
 
+//function for the third project tab
 function thirdSwitch(type) {
+    //get the current tab
     const canvas = document.querySelector("#third" + blenderCount);
     let currentID = canvas.id;
+
+    //get the index of the current project
     currentID = currentID.replace("third", "");
 
+    //increment the value
     if (type == "next") {
         if (blenderCount + 1 > 3) {
             blenderCount = 0;
@@ -70,6 +90,7 @@ function thirdSwitch(type) {
         }
     }
 
+    //set the styles
     canvas.style.display = "none";
     document.querySelector("#third" + blenderCount).style.display = "block";
 }
