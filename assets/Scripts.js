@@ -187,8 +187,8 @@ function isInViewport(element) {
     );
 }
 
+//function the handle animation toggle
 function handleScroll() {
-
     for(let i = 0; i < sections.length; i++){
         if (isInViewport(sections[i])) {
             sections2[i].classList.add('animate__bounceInUp');
@@ -198,6 +198,7 @@ function handleScroll() {
     }
 }
 
+//add event listener to for scroll
 window.addEventListener('scroll', handleScroll);
 
 // dots is an array of Dot objects,
