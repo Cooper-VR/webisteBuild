@@ -1,9 +1,12 @@
+/*idk what this is, vite added it*/
 @import"https://use.typekit.net/jmk3xov.css";
 
+/*try to get rid of bottom scroll on mobile*/
 ::-webkit-scrollbar {
     -webkit-appearance: none;
 }
 
+/*get rid of scroll, set background and default margin/padding*/
 body {
     margin: 0;
     padding: 0;
@@ -11,10 +14,12 @@ body {
     overflow-x: hidden;
 }
 
+/*responsive font-size on nav*/
 #topNav a{
     font-size: min(3vh, 3vw);
 }
 
+/*set scroll behavior and default text color*/
 * {
     color: #fff;
     scroll-behavior: smooth;
@@ -22,12 +27,7 @@ body {
     
 }
 
-svg {
-    position: fixed;
-    width: 8vw;
-    height: 8vw
-}
-
+/*set styles for labels on sliders*/
 label {
     color: #000;
     text-align: center;
@@ -38,19 +38,21 @@ label {
     padding-bottom: 1%
 }
 
+/*set the bottom nav links*/
 .linkLocation {
     width: 100vw;
     display: flex
 }
 
+/*tab images*/
 #blenderLogo {
     background-image: url(blenderLogo-32af973a.png)
 }
-
 #unityLogo {
     background-image: url(unityLogo-6bba9f0e.png)
 }
 
+/*set styling for typed header*/
 .sticky {
     color: #fff;
     font-size: 40px;
@@ -64,6 +66,7 @@ label {
     box-shadow: 0 00vh 1vh #0000
 }
 
+/*define styles for project view*/
 .blenderProjects {
     width: 100%;
     height: 100%;
@@ -71,7 +74,6 @@ label {
     background-color: rgba(255, 255, 255, 0);
     flex-direction: column
 }
-
 .blenderProjects2 {
     width: 100%;
     display: flex;
@@ -79,31 +81,19 @@ label {
     flex-direction: column
 }
 
+/*set the background for the project containers*/
 .blenderProjects div{
     height: 100%;
     background-color: rgba(255, 255, 255, 0);
 
 }
 
+/*logo for c#/python tab*/
 #cPython{
     background-image: url(cLogo-dfbd55b2.png);
 }
 
-#pfpContainer {
-    position: absolute;
-    top: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 5vw;
-    overflow-y: hidden
-}
-
-#pfpContainer img {
-    height: 10vh;
-    overflow-x: hidden
-}
-
+/**/
 .viewButtons {
     display: flex;
     background-color: #0000;
@@ -111,6 +101,7 @@ label {
     justify-content: space-between
 }
 
+/**/
 .viewButtons button {
     width: 20vw;
     height: 5vh;
@@ -118,11 +109,11 @@ label {
     background-color: #181818;
     border: solid rgb(51, 51, 51) min(.3vh, .3vw)
 }
-
 .viewButtons button:hover {
     cursor: pointer
 }
 
+/**/
 nav {
     display: flex;
     align-items: center;
@@ -131,6 +122,7 @@ nav {
     padding: 2vh
 }
 
+/**/
 #bottomNav {
     float: right;
     width: 80vw;
@@ -139,6 +131,7 @@ nav {
     margin-top: 5vw
 }
 
+/**/
 #bottomNav a,
 #bottomNav a button {
     font-size: min(4vh, 4vw);
@@ -149,6 +142,7 @@ nav {
     margin-right: 2vw
 }
 
+/**/
 #programmingArea {
     display: flex;
     justify-content: space-evenly;
@@ -164,7 +158,7 @@ nav {
     }
 }
 
-
+/**/
 .programmingSecion div {
     background-color: #0000;
     height: 10vh;
@@ -175,16 +169,19 @@ nav {
     width: 10vh
 }
 
+/**/
 #skillsArea {
     display: flex;
     flex-direction: column;
     align-items: center
 }
 
+/**/
 #skillsArea p {
     text-align: center
 }
 
+/**/
 .programmingSecion {
     display: flex;
     flex-direction: column;
@@ -192,32 +189,33 @@ nav {
     align-items: center
 }
 
+/**/
 #pythonLogo {
     background-image: url(pythonLogo-314ea70d.png)
 }
-
 #htmlCSSLogo {
     background-image: url(htmlCssLogo-6a04b140.png)
 }
-
 #javascriptLogo {
     background-image: url(javaScriptLogo-a12b5e19.png)
 }
-
 #cLogo {
     background-image: url(cLogo-dfbd55b2.png)
 }
 
+/**/
 .programmingSecion d {
     text-align: center
 }
 
+/**/
 #AboutMain {
     display: flex;
     flex-direction: row;
     margin-top: 50vh
 }
 
+/**/
 #projects {
     width: 35vw;
     display: flex;
@@ -226,23 +224,28 @@ nav {
     justify-content: center
 }
 
+/**/
 #aboutContent {
     width: 65vw
 }
 
+/**/
 #aboutContent p {
     font-size: min(2.5vh, 2.5vw)
 }
 
+/**/
 #aboutContent h3 {
     text-align: center;
     font-size: min(5vh, 5vw)
 }
 
+/**/
 #aboutContent * {
     font-size: min(3vh, 3vw)
 }
 
+/**/
 .projectCol {
     background-color: #1f1f1f;
     width: 70%;
@@ -257,10 +260,12 @@ nav {
     align-items: center
 }
 
+/**/
 .projectCol * {
     color: #fff
 }
 
+/**/
 .trail {
     position: absolute;
     height: 6px;
@@ -269,6 +274,7 @@ nav {
     background: teal
 }
 
+/**/
 .projectCol p {
     background-color: transparent;
     border: none;
@@ -277,6 +283,7 @@ nav {
     margin: 0
 }
 
+/**/
 #nameContainer {
     display: flex;
     flex-direction: column;
@@ -284,10 +291,12 @@ nav {
     align-items: center
 }
 
+/**/
 .animate__animated {
     transform: translate3d(0, 3000px, 0) scaleY(5)
 }
 
+/**/
 .projectCol div {
     background-repeat: no-repeat;
     background-size: 70%;
@@ -298,11 +307,13 @@ nav {
     width: 20%
 }
 
+/**/
 #bigAbout {
     height: 100%;
     margin-top: 8vh
 }
 
+/**/
 #bigAbout p {
     padding-top: 2vh;
     padding-bottom: 2vh;
@@ -314,20 +325,24 @@ nav {
     margin-right: 10vw
 }
 
+/**/
 #projectMain {
     display: flex;
     flex-direction: row
 }
 
+/**/
 #projects button {
     height: 5vw
 }
 
+/**/
 #projectsShow {
     width: 60vw;
     display: flex
 }
 
+/**/
 .projectView {
     height: 60vh;
     width: 60vw;
@@ -335,11 +350,13 @@ nav {
     overflow-y: hidden
 }
 
+/**/
 .projectView * {
     width: 100%;
     overflow-y: hidden
 }
 
+/**/
 #edu, #skills, #goals, #programming{
     background-color: rgb(58, 58, 58);
     padding-bottom: 5vh;
@@ -349,6 +366,7 @@ nav {
     border-radius: min(1vh, 1vw);
 }
 
+/**/
 #Tab0,
 #Tab1,
 #Tab2,
@@ -359,6 +377,7 @@ nav {
     transition: .7s ease
 }
 
+/**/
 #Tab0.animateTabs,
 #Tab1.animateTabs,
 #Tab2.animateTabs,
@@ -368,6 +387,7 @@ nav {
     width: 60vw
 }
 
+/**/
 #LinksContainer {
     display: flex;
     margin-right: 5%;
@@ -379,6 +399,7 @@ nav {
     transition: 0.2s;
 }
 
+/**/
 #LinksContainer a {
     height: 8vh;
     overflow-y: hidden;
@@ -389,6 +410,7 @@ nav {
     margin-right: 2vw
 }
 
+/**/
 #LinksContainer a img {
     overflow-y: hidden;
     margin: 0;
@@ -396,11 +418,13 @@ nav {
     overflow-x: hidden
 }
 
+/**/
 #LinksContainer.animatedContainer {
 
     opacity: 0;
 }
 
+/**/
 :root {
     --dark-bg: rgba(15, 15, 15, .95);
     --spacing: 350px;
@@ -409,6 +433,7 @@ nav {
     font-style: normal
 }
 
+/**/
 #main2 {
     width: 100vw;
     z-index: -1;
@@ -416,6 +441,7 @@ nav {
     height: 50%
 }
 
+/**/
 main {
     width: 100vw;
     color: #fff;
@@ -428,6 +454,7 @@ main {
     grid-template-columns: repeat(12, 1fr)
 }
 
+/**/
 h1,
 h2,
 h3,
@@ -437,6 +464,7 @@ blockquote {
     font-style: normal
 }
 
+/**/
 header {
     background: var(--dark-bg);
     grid-column: 2 / span 5;
@@ -445,6 +473,7 @@ header {
     margin-bottom: var(--spacing)
 }
 
+/**/
 section {
     grid-column: 2 / 8;
     padding: 1rem;
@@ -454,6 +483,7 @@ section {
     margin-bottom: var(--spacing)
 }
 
+/**/
 blockquote {
     margin: 0;
     padding: 0;
@@ -461,6 +491,7 @@ blockquote {
     margin-bottom: var(--spacing)
 }
 
+/**/
 blockquote p {
     color: #000;
     background-color: #fff;
@@ -469,10 +500,12 @@ blockquote p {
     line-height: 1
 }
 
+/**/
 .left {
     grid-column: 6 / 12
 }
 
+/**/
 .projectPictures{
     background-repeat: no-repeat;
     background-size: 70%;
@@ -482,6 +515,7 @@ blockquote p {
     margin-bottom: 5vh;
 }
 
+/**/
 #thirdImg0{
     background-image: url(Capture.PNG);
 }
@@ -495,19 +529,7 @@ blockquote p {
     background-image: url();
 }
 
-#fourthImg0{
-    background-image: url();
-}
-#fourthImg1{
-    background-image: url();
-}
-#fourthImg2{
-    background-image: url();
-}
-#fourthImg3{
-    background-image: url();
-}
-
+/**/
 #unity0{
     background-image: url(korokForest.png);
 }
@@ -520,7 +542,4 @@ blockquote p {
     width: 110%;
     overflow-x: hidden;
     overflow-y: hidden;
-}
-#unity3{
-    
 }
