@@ -93,27 +93,27 @@ label {
     background-image: url(cLogo-dfbd55b2.png);
 }
 
-/**/
+/*set button styles for view buttoms*/
 .viewButtons {
     display: flex;
     background-color: #0000;
     flex-direction: row;
-    justify-content: space-between
+    justify-content: space-between;
+    transition: 0.7s ease;
 }
-
-/**/
 .viewButtons button {
     width: 20vw;
     height: 5vh;
     color: #fff;
     background-color: #181818;
-    border: solid rgb(51, 51, 51) min(.3vh, .3vw)
+    border: solid rgb(0, 0, 0) min(.3vh, .3vw)
 }
 .viewButtons button:hover {
-    cursor: pointer
+    cursor: pointer;
+    background-color: #00000000;
 }
 
-/**/
+/*set styleing for the nav bar*/
 nav {
     display: flex;
     align-items: center;
@@ -122,7 +122,7 @@ nav {
     padding: 2vh
 }
 
-/**/
+/*new styles for the footer*/
 #bottomNav {
     float: right;
     width: 80vw;
@@ -131,7 +131,7 @@ nav {
     margin-top: 5vw
 }
 
-/**/
+/*styling for all elements inside the footer*/
 #bottomNav a,
 #bottomNav a button {
     font-size: min(4vh, 4vw);
@@ -142,7 +142,7 @@ nav {
     margin-right: 2vw
 }
 
-/**/
+/*the the area with images, needs to be responsive*/
 #programmingArea {
     display: flex;
     justify-content: space-evenly;
@@ -158,7 +158,7 @@ nav {
     }
 }
 
-/**/
+/*for picture containers*/
 .programmingSecion div {
     background-color: #0000;
     height: 10vh;
@@ -169,19 +169,19 @@ nav {
     width: 10vh
 }
 
-/**/
+/*set container styles*/
 #skillsArea {
     display: flex;
     flex-direction: column;
     align-items: center
 }
 
-/**/
+/*align paragraphs to center*/
 #skillsArea p {
     text-align: center
 }
 
-/**/
+/*apply styles to another continer*/
 .programmingSecion {
     display: flex;
     flex-direction: column;
@@ -189,7 +189,7 @@ nav {
     align-items: center
 }
 
-/**/
+/*set images for the programming section logos*/
 #pythonLogo {
     background-image: url(pythonLogo-314ea70d.png)
 }
@@ -203,19 +203,14 @@ nav {
     background-image: url(cLogo-dfbd55b2.png)
 }
 
-/**/
-.programmingSecion d {
-    text-align: center
-}
-
-/**/
+/*set styles for the entire about section*/
 #AboutMain {
     display: flex;
     flex-direction: row;
     margin-top: 50vh
 }
 
-/**/
+/*styles for the project view*/
 #projects {
     width: 35vw;
     display: flex;
@@ -224,28 +219,24 @@ nav {
     justify-content: center
 }
 
-/**/
+/*set text and elements inside the about*/
 #aboutContent {
     width: 65vw
 }
-
-/**/
 #aboutContent p {
     font-size: min(2.5vh, 2.5vw)
 }
-
-/**/
 #aboutContent h3 {
     text-align: center;
     font-size: min(5vh, 5vw)
 }
 
-/**/
+/*set default font-size for about elements*/
 #aboutContent * {
     font-size: min(3vh, 3vw)
 }
 
-/**/
+/*setyle for the project switch buttons*/
 .projectCol {
     background-color: #1f1f1f;
     width: 70%;
@@ -260,12 +251,12 @@ nav {
     align-items: center
 }
 
-/**/
+/*set the default color*/
 .projectCol * {
     color: #fff
 }
 
-/**/
+/*for cursor trail*/
 .trail {
     position: absolute;
     height: 6px;
@@ -274,7 +265,7 @@ nav {
     background: teal
 }
 
-/**/
+/*set text inside buttons*/
 .projectCol p {
     background-color: transparent;
     border: none;
@@ -283,7 +274,7 @@ nav {
     margin: 0
 }
 
-/**/
+/*the name of the project inside the buttons*/
 #nameContainer {
     display: flex;
     flex-direction: column;
@@ -291,12 +282,12 @@ nav {
     align-items: center
 }
 
-/**/
+/*default transform for the animated sections*/
 .animate__animated {
     transform: translate3d(0, 3000px, 0) scaleY(5)
 }
 
-/**/
+/*set all div containers inside he project view*/
 .projectCol div {
     background-repeat: no-repeat;
     background-size: 70%;
@@ -307,13 +298,13 @@ nav {
     width: 20%
 }
 
-/**/
+/*style for vertical ABOUT ME*/
 #bigAbout {
     height: 100%;
     margin-top: 8vh
 }
 
-/**/
+/*set the text style for ABOUT ME*/
 #bigAbout p {
     padding-top: 2vh;
     padding-bottom: 2vh;
@@ -325,24 +316,24 @@ nav {
     margin-right: 10vw
 }
 
-/**/
+/*main container for the projects*/
 #projectMain {
     display: flex;
     flex-direction: row
 }
 
-/**/
+/*set hight of the buttons*/
 #projects button {
     height: 5vw
 }
 
-/**/
+/*for the current project*/
 #projectsShow {
     width: 60vw;
     display: flex
 }
 
-/**/
+/*set the container for the container of the projects*/
 .projectView {
     height: 60vh;
     width: 60vw;
@@ -350,13 +341,13 @@ nav {
     overflow-y: hidden
 }
 
-/**/
+/*sefault styles for everything inside the project view*/
 .projectView * {
     width: 100%;
     overflow-y: hidden
 }
 
-/**/
+/*set styling for about me containers*/
 #edu, #skills, #goals, #programming{
     background-color: rgb(58, 58, 58);
     padding-bottom: 5vh;
@@ -366,7 +357,7 @@ nav {
     border-radius: min(1vh, 1vw);
 }
 
-/**/
+/*for the different project tabs*/
 #Tab0,
 #Tab1,
 #Tab2,
@@ -377,7 +368,7 @@ nav {
     transition: .7s ease
 }
 
-/**/
+/*when the tabl is active*/
 #Tab0.animateTabs,
 #Tab1.animateTabs,
 #Tab2.animateTabs,
@@ -387,7 +378,7 @@ nav {
     width: 60vw
 }
 
-/**/
+/*for the footer links*/
 #LinksContainer {
     display: flex;
     margin-right: 5%;
@@ -399,7 +390,7 @@ nav {
     transition: 0.2s;
 }
 
-/**/
+/*set the text styling for the footer links*/
 #LinksContainer a {
     height: 8vh;
     overflow-y: hidden;
@@ -410,7 +401,7 @@ nav {
     margin-right: 2vw
 }
 
-/**/
+/*for the link images*/
 #LinksContainer a img {
     overflow-y: hidden;
     margin: 0;
@@ -424,7 +415,7 @@ nav {
     opacity: 0;
 }
 
-/**/
+/*idk, vite added this, does nothing*/
 :root {
     --dark-bg: rgba(15, 15, 15, .95);
     --spacing: 350px;
@@ -433,15 +424,13 @@ nav {
     font-style: normal
 }
 
-/**/
+/*does nothing*/
 #main2 {
     width: 100vw;
     z-index: -1;
     position: fixed;
     height: 50%
 }
-
-/**/
 main {
     width: 100vw;
     color: #fff;
@@ -454,7 +443,7 @@ main {
     grid-template-columns: repeat(12, 1fr)
 }
 
-/**/
+/*set default for all headers*/
 h1,
 h2,
 h3,
@@ -464,48 +453,7 @@ blockquote {
     font-style: normal
 }
 
-/**/
-header {
-    background: var(--dark-bg);
-    grid-column: 2 / span 5;
-    font-size: 2.5rem;
-    padding: 2rem;
-    margin-bottom: var(--spacing)
-}
-
-/**/
-section {
-    grid-column: 2 / 8;
-    padding: 1rem;
-    background: var(--dark-bg);
-    font-size: 1.25rem;
-    line-height: 1.5;
-    margin-bottom: var(--spacing)
-}
-
-/**/
-blockquote {
-    margin: 0;
-    padding: 0;
-    grid-column: 2 / span 9;
-    margin-bottom: var(--spacing)
-}
-
-/**/
-blockquote p {
-    color: #000;
-    background-color: #fff;
-    font-size: 4rem;
-    display: inline;
-    line-height: 1
-}
-
-/**/
-.left {
-    grid-column: 6 / 12
-}
-
-/**/
+/*for project pictures*/
 .projectPictures{
     background-repeat: no-repeat;
     background-size: 70%;
@@ -515,7 +463,7 @@ blockquote p {
     margin-bottom: 5vh;
 }
 
-/**/
+/*for the individual pictures*/
 #thirdImg0{
     background-image: url(Capture.PNG);
 }
@@ -529,7 +477,7 @@ blockquote p {
     background-image: url();
 }
 
-/**/
+/*for the unity pictures*/
 #unity0{
     background-image: url(korokForest.png);
 }
