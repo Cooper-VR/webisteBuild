@@ -1,272 +1,260 @@
-//projcect view change variable
-let blenderCount = 0;
+/*
+Cooper Bower
+HTML/CSS Capstone Project
+August 31, 2023
+*/
 
-//get project tabs
-const tab0 = document.querySelector("#Tab0");
-const tab1 = document.querySelector("#Tab1");
-const tab2 = document.querySelector("#Tab2");
-const tab3 = document.querySelector("#Tab3");
+import '/style.css';
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-//function for the blender tab
-function blenderSwitch(type) {
-    //get the canvas
-    const canvas = document.querySelector("#blenderProject" + blenderCount);
-    let currentID = canvas.id;
+// Assuming you've loaded the GLTF model and animations
+let mixer;
 
-    //get the index of the canvas
-    currentID = currentID.replace("blenderProject", "");
+function newObject(path, id, slider, camY) {
+  // Setup
+  const scene = new THREE.Scene();
 
-    //increment according to its value
-    if (type == "next") {
-        if (blenderCount + 1 > 3) {
-            blenderCount = 0;
-        } else {
-            blenderCount++;
-        }
-    } else {
-        if (blenderCount - 1 < 0) {
-            blenderCount = 3;
-        } else {
-            blenderCount--;
-        }
-    }
+  scene.background = new THREE.Color(0x222222);
+  const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 10);
 
-    //set display for new and old canvas
-    canvas.style.display = "none";
-    document.querySelector("#blenderProject" + blenderCount).style.display = "block";
-}
+  const renderer = new THREE.WebGLRenderer({
+    canvas: document.querySelector(id),
+    antialias : false,
+    powerPreference: "high-performance",
+  });
 
-//function the unity tab switcher
-function unitySwitch(type) {
+  const parent = document.querySelector(id).parentElement;
 
-    //get the current project
-    const canvas = document.querySelector("#unity" + blenderCount);
-    let currentID = canvas.id;
+  let sliderElement = document.querySelector(slider);
 
-    //get the current index
-    currentID = currentID.replace("unity", "");
+  camera.position.setZ(2);
+  camera.position.setX(0);
+  camera.position.setY(camY);
 
-    //increment value
-    if (type == "next") {
-        if (blenderCount + 1 > 3) {
-            blenderCount = 0;
-        } else {
-            blenderCount++;
-        }
-    } else {
-        if (blenderCount - 1 < 0) {
-            blenderCount = 3;
-        } else {
-            blenderCount--;
-        }
-    }
+  renderer.render(scene, camera);
 
-    //set visibility
-    canvas.style.display = "none";
-    document.querySelector("#unity" + blenderCount).style.display = "block";
-}
+  //my model
 
-//function for the third project tab
-function thirdSwitch(type) {
-    //get the current tab
-    const canvas = document.querySelector("#third" + blenderCount);
-    let currentID = canvas.id;
+  const loader = new GLTFLoader();
 
-    //get the index of the current project
-    currentID = currentID.replace("third", "");
-
-    //increment the value
-    if (type == "next") {
-        if (blenderCount + 1 > 3) {
-            blenderCount = 0;
-        } else {
-            blenderCount++;
-        }
-    } else {
-        if (blenderCount - 1 < 0) {
-            blenderCount = 3;
-        } else {
-            blenderCount--;
-        }
-    }
-
-    //set the styles
-    canvas.style.display = "none";
-    document.querySelector("#third" + blenderCount).style.display = "block";
-}
-
-//function the handle the table changing
-function tabChange(button, type) {
-    if (type == "blender") {
-        tab0.className = "projectView";
-        tab0.classList.add('animateTabs')
-        tab1.className = "projectView";
-        tab2.className = "projectView";
-    } else if (type == "unity") {
-        tab0.className = "projectView";
-        tab1.className = "projectView";
-        tab1.classList.add('animateTabs');
-        tab2.className = "projectView";
-
-    } else if (type == "third") {
-        tab0.className = "projectView";
-        tab1.className = "projectView";
-        tab2.className = "projectView";
-        tab2.classList.add('animateTabs');
-
-    } 
-
-}
-
-//function the toggle the github and linkedin logos
-function showContacts() {
-    const contactsMenu = document.querySelector('#LinksContainer');
-
-    //toggle this
-
-    if (contactsMenu.className == "animatedContainer") {
-        contactsMenu.className = "";
-    } else {
-        contactsMenu.className = "animatedContainer";
-    }
-
-    //check if class==animated
-
-    //is not add it
-    //if yes, remove it
-}
-
-//wait till pages loads to fun typing function
-window.onload = function () {
-    typeLetter();  //example function call.
-}
-
-//function to type the header
-function typeLetter() {
-    //get header and description
-    const name = document.querySelector('.sticky');
-    const desc = document.querySelector('#desc');
-
-    //set the end-text
-    const descText = "Programmer and 3D Modeler"
-    const nameText = 'Cooper Bower'
-
-    //declare the starting indexes
-    let index = 0;
-    let index2 = 0;
-
-    //create an inverval to type 1 letter every 100millsec.
-    const interval = setInterval(() => {
-        if (index2 < descText.length) {
-            desc.innerHTML += descText[index2];
-            index2++;
-        } else {
-            //clear onces all letters are typed
-            clearInterval(interval);
-        }
-
-        if (index < nameText.length) {
-            name.innerHTML += nameText[index];
-            index++;
-        }
-    }, 100);
-
-}
-
-//get all animated spotes
-const sections = document.querySelectorAll('.animatedSpot');
-const sections2 = document.querySelectorAll('.animate__animated');
-
-//function to check if the element is in view
-function isInViewport(element) {
-    //get its transform
-    const rect = element.getBoundingClientRect();
-    return (
-        //return if its showing
-        rect.bottom - window.innerHeight / 3 <= (window.innerHeight || document.documentElement.clientHeight) 
-    );
-}
-
-//function the handle animation toggle
-function handleScroll() {
-    for(let i = 0; i < sections.length; i++){
-        if (isInViewport(sections[i])) {
-            sections2[i].classList.add('animate__bounceInUp');
-        } else {
-            sections2[i].classList = "animate__animated";
-        }
-    }
-}
-
-//add event listener to for scroll
-window.addEventListener('scroll', handleScroll);
-
-// dots is an array of Dot objects,
-// mouse is an object used to track the X and Y position
-// of the mouse, set with a mousemove event listener below
-var dots = [],
-    mouse = {
-        x: 0,
-        y: 0
-    };
-
-// The Dot object used to scaffold the dots
-var Dot = function () {
-    this.x = 0;
-    this.y = 0;
-    this.node = (function () {
-        var n = document.createElement("div");
-        n.className = "trail";
-        n.style.pointerEvents = 'none';
-        document.body.appendChild(n);
-        return n;
-    }());
-};
-// The Dot.prototype.draw() method sets the position of 
-// the object's <div> node
-Dot.prototype.draw = function () {
-    this.node.style.left = this.x + "px";
-    this.node.style.top = this.y + "px";
-};
-
-// Creates the Dot objects, populates the dots array
-for (var i = 0; i < 12; i++) {
-    var d = new Dot();
-    dots.push(d);
-}
-
-// This is the screen redraw function
-function draw() {
-    // Make sure the mouse position is set everytime
-    // draw() is called.
-    var x = mouse.x,
-        y = mouse.y;
-
-    // This loop is where all the 90s magic happens
-    dots.forEach(function (dot, index, dots) {
-        var nextDot = dots[index + 1] || dots[0];
-
-        dot.x = x;
-        dot.y = y;
-        dot.draw();
-        x += (nextDot.x - dot.x) * .6;
-        y += (nextDot.y - dot.y) * .6;
-
+  loader.load(path, function (gltf) {
+    var object = gltf.scene;
+    object.traverse((node) => {
+      if (!node.isMesh) return;
+      node.material.wireframe = false;
+      node.material.wireframeLinewidth = 0.5;
     });
-}
 
-addEventListener("mousemove", function (event) {
-    //event.preventDefault();
-    mouse.x = event.pageX;
-    mouse.y = event.pageY;
-});
 
-// animate() calls draw() then recursively calls itself
-// everytime the screen repaints via requestAnimationFrame().
-function animate() {
-    draw();
+    const loadedObject = gltf.scene;
+    scene.add(loadedObject);
+
+
+    // Set the initial rotation of the object (in radians)
+    loadedObject.rotation.x = 0; // No initial rotation around the X-axis
+    loadedObject.rotation.y = 0; // No initial rotation around the Y-axis
+    loadedObject.rotation.z = 0; // No initial rotation around the Z-axis
+
+
+    //const light = new THREE.DirectionalLight(0x404040); // soft white light
+    //scene.add(light);
+
+    // Add the object to the scene
+    scene.add(loadedObject);
+
+    // Define a function for the animation loop
+    function animate() {
+      // Rotate the object in each frame
+      loadedObject.rotation.x = 0.3;
+      loadedObject.rotation.y += 0.01; // Rotate around the Z-axis by 0.01 radians
+
+      let scale = sliderElement.value;
+
+      scale = 2;
+      loadedObject.scale.x = scale;
+      loadedObject.scale.y = scale;
+      loadedObject.scale.z = scale;
+
+      // Render the scene
+      renderer.render(scene, camera);
+
+      // Call animate() again on the next frame
+      requestAnimationFrame(animate);
+    }
+    // Start the animation loop
+    animate();
+
+  }, undefined, function (error) {
+    console.error(error);
+  });
+
+  const pointLight = new THREE.DirectionalLight(0xffffff);
+  pointLight.position.set(5, 5, 5);
+  scene.add(pointLight);
+
+  // Animation Loop
+
+  function animate() {
     requestAnimationFrame(animate);
+
+    try {
+      camY = sliderElement.value / 100;
+    } catch {
+      console.log("slider doesnt exist");
+    }
+
+    camera.position.setY(camY);
+
+    // controls.update();
+    var pixelRatio = 2*(window.innerWidth / window.innerHeight); // Get the device pixel ratio
+    // Set the canvas dimensions taking into account the pixel ratio
+    //renderer.setSize(window.innerWidth *0.6, window.innerHeight *0.55);
+    // Adjust the pixel ratio for rendering
+    renderer.setPixelRatio(pixelRatio);
+    camera.aspect = (window.innerWidth * 0.6) / (window.innerHeight *0.55);
+    camera.updateProjectionMatrix();
+
+    renderer.render(scene, camera);
+  }
+
+  animate();
+
 }
 
-// And get it started by calling animate().
-animate();
+function newObject2(path, id, slider, camY, objectPosition) {
+  // Setup
+  const scene = new THREE.Scene();
+
+  scene.background = new THREE.Color(0x444444);
+  const camera = new THREE.PerspectiveCamera(80, document.querySelector(id).innerWidth / document.querySelector(id).innerHeight, 0.1, 10);
+
+  const renderer = new THREE.WebGLRenderer({
+    canvas: document.querySelector(id),
+  });
+
+  const parent = document.querySelector(id).parentElement;
+
+  let sliderElement = document.querySelector(slider);
+
+  camera.position.setZ(2);
+  camera.position.setX(0);
+  camera.position.setY(camY);
+
+  renderer.render(scene, camera);
+
+  //my model
+
+  const loader = new GLTFLoader();
+
+  for (let i = 0; i < path.length; i++) {
+    loader.load(path, function (gltf) {
+      // Get a reference to the loaded 3D object
+      var object = gltf.scene;
+      object.traverse((node) => {
+        if (!node.isMesh) return;
+        node.material.wireframe = true;
+        node.material.wireframeLinewidth = 0.5;
+      });
+
+
+      const loadedObject = gltf.scene;
+
+      mixer = new THREE.AnimationMixer(loadedObject);
+      const clips = gltf.animations;
+
+      clips.forEach(function(clip){
+        const action = mixer.clipAction(clip);
+        action.play();
+      })
+
+      //const clip = THREE.AnimationClip.findByName(clips, "objectRotateLinear");
+      //const action = mixer.clipAction(clip);
+      //action.play();
+
+      scene.add(loadedObject);
+      loadedObject.position.x = objectPosition[0];
+      loadedObject.position.y = objectPosition[1];
+      loadedObject.position.z = objectPosition[2];
+
+      //const light = new THREE.DirectionalLight(0x404040); // soft white light
+      //scene.add(light);
+
+      // Add the object to the scene
+      scene.add(loadedObject);
+
+      const clock = new THREE.Clock();
+
+      // Define a function for the animation loop
+      function animate() {
+        // Rotate the object in each frame
+        //loadedObject.rotation.x = 0.3;
+        //loadedObject.rotation.y += 0.01; // Rotate around the Z-axis by 0.01 radians
+
+        mixer.update(clock.getDelta() * 2);
+
+        let scale = 1.4;
+        loadedObject.scale.x = scale;
+        loadedObject.scale.y = scale;
+        loadedObject.scale.z = scale;
+
+        // Render the scene
+        renderer.render(scene, camera);
+
+        // Call animate() again on the next frame
+        requestAnimationFrame(animate);
+      }
+      // Start the animation loop
+      animate();
+
+    }, undefined, function (error) {
+      console.error(error);
+    });
+  }
+
+
+  const pointLight = new THREE.DirectionalLight(0xffffff);
+  pointLight.position.set(5, 5, 5);
+
+  const ambientLight = new THREE.AmbientLight(0xffffff);
+  scene.add(pointLight, ambientLight);
+
+  // Animation Loop
+
+  function animate() {
+    requestAnimationFrame(animate);
+
+    try {
+      camY = sliderElement.value / 100;
+    } catch {
+      console.log("slider doesnt exist");
+    }
+
+    camera.position.setY(camY);
+
+    // controls.update();
+    var pixelRatio = window.devicePixelRatio || 1; // Get the device pixel ratio
+    // Set the canvas dimensions taking into account the pixel ratio
+    renderer.setSize(parent.offsetWidth * pixelRatio, parent.offsetHeight * pixelRatio);
+    // Adjust the pixel ratio for rendering
+    renderer.setPixelRatio(pixelRatio);
+    camera.aspect = parent.offsetWidth / parent.offsetHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(parent.offsetWidth, parent.offsetHeight);
+
+    renderer.render(scene, camera);
+  }
+
+  animate();
+
+}
+
+//instatiate oblect models
+try {
+  newObject('https://cooper-vr.github.io/websiteBuild/assets/3dStuff/swords.gltf', '#bg', '#slider1', 0);
+  newObject('https://cooper-vr.github.io/websiteBuild/assets/3dStuff/starKing.glb', '#bh', '#slider2', 2);
+  newObject('https://cooper-vr.github.io/websiteBuild/assets/3dStuff/deligate.glb', '#bg2', '#slider3', 2);
+  newObject('https://cooper-vr.github.io/websiteBuild/assets/3dStuff/scherzo.glb', '#bh2', '#slider4', 2);
+} catch {
+  console.log("wrong page")
+}
