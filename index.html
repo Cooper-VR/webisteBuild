@@ -11,26 +11,30 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio">
     <meta name="author" content="Cooper Bower">
     <link rel="icon" type="image/x-icon" href="assets/favicon-61e3227f.png">
+
+    <!--link exxternal assets-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script type="module" crossorigin src="assets/index-daf5bf62.js"></script>
     <link rel="stylesheet" href="assets/index-6b2b7d76.css">
 </head>
 
 <body>
+    <!--top naitgations bar to other parts of the document-->
     <nav id="topNav">
         <a href="#About">About Me</a>
         <a href="#projects">Projects</a>
         <a href="#Contacts">Contacts</a>
     </nav>
 
+    <!--container for the name and description that will be typed onload-->
     <div id="nameContainer">
         <div class="sticky"></div>
-        <!--could do matrix effect on this somethow-->
         <div id="desc"></div>
     </div>
 
 
     <div id="About" class="linkLocation"></div>
+    <!--about letter to run vertically-->
     <div id="AboutMain">
         <div id="bigAbout">
             <p>A</p>
@@ -42,6 +46,7 @@
             <p>M</p>
             <p>E</p>
         </div>
+        <!--flex container down for different sections-->
         <div id="aboutContent">
             <div id="programming" class="animatedSpot">
                 <h3 class="animate__animated">PROGRAMMING</h3>
@@ -84,10 +89,12 @@
         </div>
     </div>
 
+    <!--spacer-->
     <div style="height: 30vh;"></div>
 
     <p style="text-align: center; font-size:min(4vh,4vw)">Projects</p>
     <div id="projectMain">
+        <!--buttons to handle tabl changes for projects-->
         <div id="projects">
             <button class="projectCol" onclick="tabChange(this, 'blender')">
                 <p>Blender</p>
@@ -101,6 +108,8 @@
                 <p>c#/python</p>
                 <div id="cPython"></div>
         </div>
+
+        <!--the view area for the different projects-->
         <div id="projectsShow">
             <div class="projectView" id="Tab0">
                 <div class="viewButtons">
@@ -176,17 +185,20 @@
                     <div class="projectPictures" id="thirdImg3">
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
     </div>
+
+    <!--container for linedin and github links-->
     <div class="animatedContainer" id="LinksContainer">
         <a target=”_blank” alt="gitHub" href="https://github.com/Cooper-VR"><img alt="github Logo"
                 src="assets/gitLogo-8f5224d1.png"></a>
         <a target=”_blank” alt="linkenIn" href="https://www.linkedin.com/in/cooper-bower-b58b10273/"><img
                 alt="linkenIn logo" src="assets/linkedinLogo-9c94a5a3.png"></a>
     </div>
+
+    <!--just a bottom nav-->
     <footer id="Contacts" class="linkLocation">
         <nav id="bottomNav">
             <a href="#topNav">Home</a>
@@ -195,6 +207,8 @@
             <a href="#Contacts"><button onclick="showContacts();">Contacts</button></a>
         </nav>
     </footer>
+
+    <!--link javscript after page is loaded-->
     <script src="assets/Scripts.js"></script>
     <script type="module" crossorigin src="assets/index-daf5bf62.js"></script>
 </body>
