@@ -95,29 +95,7 @@ function thirdSwitch(type) {
     document.querySelector("#third" + blenderCount).style.display = "block";
 }
 
-function fourthSwitch(type) {
-    const canvas = document.querySelector("#fourth" + blenderCount);
-    let currentID = canvas.id;
-    currentID = currentID.replace("fourth", "");
-
-    if (type == "next") {
-        if (blenderCount + 1 > 3) {
-            blenderCount = 0;
-        } else {
-            blenderCount++;
-        }
-    } else {
-        if (blenderCount - 1 < 0) {
-            blenderCount = 3;
-        } else {
-            blenderCount--;
-        }
-    }
-
-    canvas.style.display = "none";
-    document.querySelector("#fourth" + blenderCount).style.display = "block";
-}
-
+//function the handle the table changing
 function tabChange(button, type) {
     if (type == "blender") {
         tab0.className = "projectView";
@@ -140,6 +118,7 @@ function tabChange(button, type) {
 
 }
 
+//function the toggle the github and linkedin logos
 function showContacts() {
     const contactsMenu = document.querySelector('#LinksContainer');
 
@@ -157,25 +136,32 @@ function showContacts() {
     //if yes, remove it
 }
 
+//wait till pages loads to fun typing function
 window.onload = function () {
     typeLetter();  //example function call.
 }
 
+//function to type the header
 function typeLetter() {
+    //get header and description
     const name = document.querySelector('.sticky');
     const desc = document.querySelector('#desc');
 
+    //set the end-text
     const descText = "Programmer and 3D Modeler"
     const nameText = 'Cooper Bower'
 
+    //declare the starting indexes
     let index = 0;
     let index2 = 0;
 
+    //create an inverval to type 1 letter every 100millsec.
     const interval = setInterval(() => {
         if (index2 < descText.length) {
             desc.innerHTML += descText[index2];
             index2++;
         } else {
+            //clear onces all letters are typed
             clearInterval(interval);
         }
 
@@ -187,14 +173,17 @@ function typeLetter() {
 
 }
 
+//get all animated spotes
 const sections = document.querySelectorAll('.animatedSpot');
 const sections2 = document.querySelectorAll('.animate__animated');
 
+//function to check if the element is in view
 function isInViewport(element) {
+    //get its transform
     const rect = element.getBoundingClientRect();
     return (
+        //return if its showing
         rect.bottom - window.innerHeight / 3 <= (window.innerHeight || document.documentElement.clientHeight) 
-       // rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
 
