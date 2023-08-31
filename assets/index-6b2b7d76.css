@@ -336,6 +336,23 @@ nav {
     overflow-y: hidden
 }
 
+#edu, #skills, #goals, #programming{
+    background-color: rgb(58, 58, 58);
+    padding-bottom: 5vh;
+    margin-top: 15vh;
+    padding-left: 2vw;
+    border: solid black min(0.4vh, 0.4vw);
+    border-radius: min(1vh, 1vw);
+}
+
+#skills{
+
+}
+
+#goals{
+
+}
+
 #Tab0,
 #Tab1,
 #Tab2,
