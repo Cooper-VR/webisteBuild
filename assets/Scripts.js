@@ -272,7 +272,15 @@ addEventListener("mousemove", function (event) {
 // animate() calls draw() then recursively calls itself
 // everytime the screen repaints via requestAnimationFrame().
 function animate() {
-    draw();
+    if(screen.width > screen.height){
+        if(screen.width > 800){
+            draw();
+        }
+    } else{
+        if (screen.height > 800){
+            draw();
+        }
+    }
     requestAnimationFrame(animate);
 }
 
