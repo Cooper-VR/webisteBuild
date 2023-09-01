@@ -54,14 +54,14 @@ function unitySwitch(type) {
 
     //increment value
     if (type == "next") {
-        if (blenderCount + 1 > 3) {
+        if (blenderCount + 1 > 2) {
             blenderCount = 0;
         } else {
             blenderCount++;
         }
     } else {
         if (blenderCount - 1 < 0) {
-            blenderCount = 3;
+            blenderCount = 2;
         } else {
             blenderCount--;
         }
@@ -145,6 +145,8 @@ function showContacts() {
 //wait till pages loads to fun typing function
 window.onload = function () {
     typeLetter();  //example function call.
+
+    //alert("Some features may not be working, go to the live built at, https://cooper-vr.github.io/websiteBuild/ to see all features working")
 }
 
 //function to type the header
