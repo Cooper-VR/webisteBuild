@@ -259,9 +259,9 @@ nav {
 /*for cursor trail*/
 .trail {
     position: absolute;
-    height: 2vw;
+    height: 0.7vw;
     z-index: 2;
-    width: 2vw;
+    width: 0.7vw;
     border-radius: min(5vh, 5vw);
     background: rgb(75, 75, 75)
 }
